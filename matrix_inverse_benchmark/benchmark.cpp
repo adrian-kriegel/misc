@@ -195,7 +195,7 @@ void benchmarkInverseProduct(int dimM, int dimB)
 
     for (uint i = 0; i < iterations; ++i)
     {
-        llt.matrixL().solve(b);
+        Eigen::MatrixX<S> a = llt.matrixL().solve(b);
     }
 
     t5.report();
